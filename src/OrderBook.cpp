@@ -30,11 +30,6 @@ void Orderbook::match() {
 
             uint32_t tradeQuantity = std::min(buyer.quantity, seller.quantity);
 
-            // ==========================================
-            // PRINTING BAND KAR DI HAI BENCHMARK KE LIYE
-            // ==========================================
-            // std::cout << "[TRADE EXECUTED] " << tradeQuantity << " shares of " 
-            //           << buyer.ticker << " at Rs " << lowestSellPrice << "\n";
 
             buyer.quantity -= tradeQuantity;
             seller.quantity -= tradeQuantity;
